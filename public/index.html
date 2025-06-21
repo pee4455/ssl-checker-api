@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSL Checker API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        .endpoint {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 SSL Certificate Checker API</h1>
+        <p>Welcome to the SSL Certificate Checker API for n8n LINE Bot integration.</p>
+        
+        <h2>API Endpoint</h2>
+        <div class="endpoint">
+            <strong>GET</strong> <code>/api/ssl-check?domain=DOMAIN_NAME</code>
+        </div>
+        
+        <h2>Example Usage</h2>
+        <div class="endpoint">
+            <code>GET /api/ssl-check?domain=google.com</code><br>
+            <code>GET /api/ssl-check?domain=github.com</code>
+        </div>
+        
+        <h2>Response Format</h2>
+        <pre><code>{
+  "success": true,
+  "subject": "*.google.com",
+  "issuer": {
+    "name": "Google Trust Services LLC",
+    "friendly_name": "Google Trust Services LLC"
+  },
+  "valid_from": "2024-01-01T00:00:00.000Z",
+  "valid_to": "2024-04-01T00:00:00.000Z",
+  "days_left": 45,
+  "serial_number": "1234567890",
+  "fingerprint": "AA:BB:CC:DD:EE:FF...",
+  "dns_names": ["*.google.com", "google.com"],
+  "revoked": false
+}</code></pre>
+        
+        <p><small>API developed for n8n workflow integration</small></p>
+    </div>
+</body>
+</html>

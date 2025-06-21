@@ -5,13 +5,13 @@
     "main": "api/ssl-check.js",
     "scripts": {
       "dev": "vercel dev",
-      "build": "echo 'No build step required'"
+      "build": "mkdir -p public && echo '{}' > public/index.json"
     },
     "dependencies": {},
     "engines": {
       "node": ">=18.0.0"
     },
     "keywords": ["ssl", "certificate", "checker", "api", "n8n"],
-    "author": "p",
+    "author": "Your Name",
     "license": "MIT"
   }

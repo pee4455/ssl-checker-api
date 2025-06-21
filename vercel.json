@@ -5,14 +5,10 @@
         "runtime": "@vercel/node"
       }
     },
-    "routes": [
+    "rewrites": [
       {
-        "src": "/api/ssl-check",
-        "dest": "/api/ssl-check.js"
-      },
-      {
-        "src": "/ssl-check",
-        "dest": "/api/ssl-check.js"
+        "source": "/ssl-check",
+        "destination": "/api/ssl-check"
       }
     ],
     "headers": [

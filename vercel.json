@@ -1,0 +1,37 @@
+{
+    "version": 2,
+    "functions": {
+      "api/ssl-check.js": {
+        "runtime": "@vercel/node"
+      }
+    },
+    "routes": [
+      {
+        "src": "/api/ssl-check",
+        "dest": "/api/ssl-check.js"
+      },
+      {
+        "src": "/ssl-check",
+        "dest": "/api/ssl-check.js"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/api/(.*)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Access-Control-Allow-Methods",
+            "value": "GET, POST, OPTIONS"
+          },
+          {
+            "key": "Access-Control-Allow-Headers",
+            "value": "Content-Type"
+          }
+        ]
+      }
+    ]
+  }

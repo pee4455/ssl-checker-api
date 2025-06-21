@@ -1,0 +1,17 @@
+{
+    "name": "ssl-checker-api",
+    "version": "1.0.0",
+    "description": "SSL Certificate Checker API for n8n workflow",
+    "main": "api/ssl-check.js",
+    "scripts": {
+      "dev": "vercel dev",
+      "build": "echo 'No build step required'"
+    },
+    "dependencies": {},
+    "engines": {
+      "node": ">=18.0.0"
+    },
+    "keywords": ["ssl", "certificate", "checker", "api", "n8n"],
+    "author": "p",
+    "license": "MIT"
+  }
